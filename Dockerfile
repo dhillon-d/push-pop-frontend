@@ -8,4 +8,4 @@ RUN npm ci
 
 RUN npm run build
 
-CMD ["npx", "serve", "dist/", "-l", "5174"]
+CMD ["npx", "serve", "dist/", "-l", "5173"]
