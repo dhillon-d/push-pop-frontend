@@ -1,6 +1,6 @@
 **Design**
 
-This app is the frontend for pushing and popping values to a backend in memory database. Both applications have to be running in order to work locally.
+This app is the frontend for pushing and popping values to a backend in memory database. The backend application has to be running in order for this application to work.
 
 **Versions**
 
