@@ -1,15 +1,30 @@
 import "./App.css";
 import { useState, useRef } from "react";
+import axios from "axios";
 
 function App() {
   const inputRef = useRef(null);
-  const [inputValue, setInputValue] = useState("");
   const [outputValue, setOutputValue] = useState("");
   const handleInputClick = () => {
-    setInputValue(inputRef.current.value);
+    axios({
+      method: "post",
+      url: "localhost:5000/push",
+      data: {
+        value: inputRef.current.value,
+      },
+    });
   };
   const handleOutputClick = () => {
-    setOutputValue(inputValue);
+    axios({
+      method: "get",
+      url: "localhost:5000/pop",
+    })
+      .then(function (response) {
+        setOutputValue(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   return (
