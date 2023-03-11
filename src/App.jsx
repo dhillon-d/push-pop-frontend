@@ -8,7 +8,7 @@ function App() {
   const handleInputClick = () => {
     axios({
       method: "post",
-      url: "localhost:5000/push",
+      url: "http://localhost:5000/push",
       data: {
         value: inputRef.current.value,
       },
@@ -17,7 +17,7 @@ function App() {
   const handleOutputClick = () => {
     axios({
       method: "get",
-      url: "localhost:5000/pop",
+      url: "http://localhost:5000/pop",
     })
       .then(function (response) {
         setOutputValue(response.data);
