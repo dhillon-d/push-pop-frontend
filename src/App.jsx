@@ -20,7 +20,7 @@ function App() {
       url: "http://localhost:5000/pop",
     })
       .then(function (response) {
-        setOutputValue(response.data);
+        setOutputValue(response.data.value);
       })
       .catch(function (error) {
         console.log(error);
